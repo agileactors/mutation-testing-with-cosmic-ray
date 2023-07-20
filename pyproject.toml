@@ -1,0 +1,20 @@
+[tool.coverage.report]
+show_missing = true
+omit = [
+    "*/__init__.py",
+    ".mypy_cache",
+    ".pytest_cache",
+]
+
+[tool.coverage.xml]
+output = "coverage-reports/cobertura-coverage.xml"
+
+[tool.coverage.run]
+source = ["mutation-testing-with-cosmic-ray"]
+branch = true
+relative_files = true
+omit = [
+    "*/__init__.py",
+    ".mypy_cache",
+    "test/",
+]
