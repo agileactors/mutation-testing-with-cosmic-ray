@@ -2,15 +2,11 @@
 module-path = "src"
 timeout = 30.0
 test-command = "python -m pytest test"
-excluded-modules = [
-    "src/untestable_class.py",
-]
+excluded-modules = []
 
 [cosmic-ray.distributor]
 name = "local"
 
 [cosmic-ray.filters.operators-filter]
-exclude-operators = [
-    "core/RemoveDecorator",
-]
+exclude-operators = []
 
