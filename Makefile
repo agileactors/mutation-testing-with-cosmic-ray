@@ -1,3 +1,6 @@
+unit:
+	python -m pytest -v -s test --no-header -vv --cov=src --cov-report=term-missing
+
 mutation:
 	echo "Initialising mutation sqlite database"
 	cosmic-ray init cosmic_ray_config.toml cosmic_ray.sqlite
