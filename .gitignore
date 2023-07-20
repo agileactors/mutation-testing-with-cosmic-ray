@@ -1,0 +1,3 @@
+.pytest_cache
+cosmic_ray.sqlite
+report.html
