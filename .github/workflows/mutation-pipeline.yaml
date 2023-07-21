@@ -5,7 +5,7 @@ on:
 
 jobs:
   mutation-with-multiple-workers:
-    name: Mutation Testing with multiple workers
+    name: Multiple workers
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -23,7 +23,7 @@ jobs:
           make mutation-multiple-workers
 
   mutation-without-multiple-workers:
-    name: Mutation Testing with a single worker
+    name: Single worker
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
