@@ -1,4 +1,4 @@
-name: Mutation Testing Workflow (Cosmic-Ray)
+name: Cosmic Ray Mutation Testing
 run-name: Data Ingestion Mutation Testing Workflow
 on:
   workflow_dispatch:
