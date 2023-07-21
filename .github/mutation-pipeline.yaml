@@ -1,0 +1,41 @@
+name: Mutation Testing Workflow (Cosmic-Ray)
+run-name: Data Ingestion Mutation Testing Workflow
+on:
+  workflow_dispatch:
+
+jobs:
+  mutation-with-multiple-workers:
+    name: Mutation Testing
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Set up Python version
+        uses: actions/setup-python@v4
+        with:
+          python-version-file: .python-version
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Run Mutation Tests
+        run: |
+          make mutation-multiple-workers
+
+  mutation-without-multiple-workers:
+    name: Mutation Testing
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Set up Python version
+        uses: actions/setup-python@v4
+        with:
+          python-version-file: .python-version
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Run Mutation Tests
+        run: |
+          make mutation

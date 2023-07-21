@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  workers:
+    build:
+      context: .
+      dockerfile: ./Dockerfile-mutation-worker
+    deploy:
+        replicas: 3
+    ports:
+      - "0001-0003:8080"

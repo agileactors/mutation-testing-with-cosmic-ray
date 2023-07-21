@@ -1,5 +1,6 @@
 .pytest_cache
 .coverage
 cosmic_ray.sqlite
+cosmic_ray_multiple_workers.sqlite
 report.html
 .idea

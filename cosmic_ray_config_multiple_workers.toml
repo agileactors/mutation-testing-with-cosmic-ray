@@ -1,0 +1,19 @@
+[cosmic-ray]
+module-path = "src"
+timeout = 30.0
+test-command = "python -m pytest test"
+excluded-modules = [
+    "src/untestable_class.py",
+]
+
+[cosmic-ray.distributor]
+name = "http"
+
+[cosmic-ray.distributor.http]
+worker-urls = ["http://localhost:0001", "http://localhost:0002", "http://localhost:0003"]
+
+[cosmic-ray.filters.operators-filter]
+exclude-operators = [
+    "core/RemoveDecorator",
+]
+
